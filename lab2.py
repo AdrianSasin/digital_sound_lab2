@@ -51,3 +51,17 @@ plt.plot(fft_freq1[:n], np.abs(fft_result1[:n]) * 2 / len(sine_mix))
 plt.xlabel("Frequency [Hz]")
 plt.ylabel("Amplitude")
 plt.show()
+
+#zad. 3.
+
+T = 1 / f1
+periods = 5
+
+samples = int(periods * T * fs)
+
+plt.plot(np.arange(samples) / fs, sine_mix[:samples])
+plt.xlabel("Time [s]")
+plt.ylabel("Amplitude")
+plt.title("First periods of signal")
+plt.grid(True)
+plt.show()
